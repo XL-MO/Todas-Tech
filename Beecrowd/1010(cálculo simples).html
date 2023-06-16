@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+var lines = ["12 1 5.30", "16 2 5.10"]
+var line1 = lines.shift().split(" "); // ["12","1","5.30"]
+var line2 = lines.shift().split(" "); // ["16","2","5.10"]
+
+/**
+ * Escreva a sua solução aqui
+ * Code your solution here
+ * Escriba su solución aquí
+ */
+
+ 
+var codigo_peca1 = parseInt(line1.shift());
+var numero_peca1 = parseInt(line1.shift());                   // número de peças 1
+var valor_unitario_peca1 = parseFloat(line1.shift());                  // valor unitário de cada peça 1
+
+
+var codigo_peca2 = parseInt(line2.shift());                  // código de uma peça 2
+var numero_peca2 = parseInt(line2.shift());            //  número de peças 2 
+var valor_unitario_peca2 = parseFloat(line2.shift());                     // alor unitário de cada peça 
+
+var valor_total = (numero_peca1 * valor_unitario_peca1) + (numero_peca2 * valor_unitario_peca2);
+
+console.log("VALOR A PAGAR: R$ " + valor_total.toFixed(2));
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
