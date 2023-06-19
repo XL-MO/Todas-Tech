@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+var lines = [3002.00] //Exemplo de entrada
+
+ 
+
+var salario = parseFloat(lines[0]);  // salário
+
+
+var imposto;
+
+if (salario <= 2000.00) {
+    imposto = 0.00;  // Verifica se o salário é menor ou igual a 2000
+} else if (salario <= 3000.00) {
+    imposto = (salario - 2000.00) * 0.08;  // Verifica se o salário está na faixa entre 2000.01 e 3000.00
+} else if (salario <= 4500.00) {
+    imposto = 1000.00 * 0.08 + (salario - 3000.00) * 0.18;  // Verifica se o salário está na faixa entre 3000.01 e 4500.00
+} else {
+    imposto = 1000.00 * 0.08 + 1500.00 * 0.18 + (salario - 4500.00) * 0.28;  // Salário acima de 4500.00
+}
+
+if (imposto === 0.00) {
+    console.log("Isento");  // Imprime "Isento" se o imposto for igual a zero
+} else {
+    console.log("R$ " + imposto.toFixed(2));  // Imprime o valor do imposto com duas casas decimais
+}
