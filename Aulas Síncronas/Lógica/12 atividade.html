@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+// sistema de votação
+
+// Menu
+
+var     menu = "1) Ana \n"; 
+        menu += "2) Byanca \n"; 
+        menu += "3) Soraia \n"; 
+        menu += "4) Finalizar";
+
+// Contador
+var Ana = 0, Byanca = 0, Soraia = 0;
+
+// Laço
+
+do {
+    var voto = parseInt(prompt(menu));
+
+    switch (voto) {
+        case 1: 
+            Ana++;
+            break;
+
+        case 2:
+            Byanca++;
+            break;
+
+        case 3:
+            Soraia++;
+            break;
+
+        case 4:
+            alert("Votação finalizada");
+            break;
+
+        default:
+            alert("Opção inválida, tente novamente.");
+          
+    }
+}while(voto != 4);
+
+//Resultado
+document.write("Ana obteve " + Ana + " votos<br>");
+document.write("Byanca obteve " + Byanca + " votos<br>");  
+document.write("Soraia obteve " + Soraia + " votos<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
