@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+var lines = "2 113 45 34565 6 000 8"; // Dados de entrada separados por espaço
+
+var valores = lines.split(" ").map(Number);
+
+var maiorValor = valores[0];
+var posicao = 0;
+
+// Loop para encontrar o maior valor e sua posição
+for (var indice = 1; indice < valores.length; indice++) {
+  if (valores[indice] > maiorValor) {
+    maiorValor = valores[indice];
+    posicao = indice;
+  }
+}
+
+console.log("Maior valor: " + maiorValor);
+console.log("Posição: " + posicao);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
