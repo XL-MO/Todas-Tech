@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+var lines = ["1.0 7.0","5.0 9.0"]
+var line1 = lines.shift().split(" "); // ["1.0","7.0"]
+var line2 = lines.shift().split(" "); // ["5.0","9.0"]
+
+var x1 = line1.shift();
+var y1 = line1.shift();
+var x2 = line2.shift();
+var y2 = line2.shift();
+
+
+var operador1 = (x2 - x1) * (x2 - x1);
+var operador2 = (y2 - y1) * (y2 - y1);
+var resulOperador = operador1 + operador2;
+
+var distancia = Math.sqrt(resulOperador);
+
+console.log(distancia.toFixed(4));
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
