@@ -6,8 +6,16 @@
     <title>Document</title>
 
     <script>
-var lines = "2 113 45 34565 6 000 8"; // Dados de entrada separados por espaço
 
+
+
+var entrada = "5 8 12 3 6 15 ..."; // Exemplo de entrada com 100 números
+
+var numeros = entrada.split(" ").map(Number);
+
+console.log(numeros);
+
+var lines = 100
 var valores = lines.split(" ").map(Number);
 
 var maiorValor = valores[0];
@@ -23,7 +31,7 @@ for (var indice = 1; indice < valores.length; indice++) {
 
 console.log("Maior valor: " + maiorValor);
 console.log("Posição: " + posicao);
-
+console.log("calcularNotasEMoedas()")
 
     </script>
 </head>
