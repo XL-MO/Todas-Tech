@@ -15,34 +15,33 @@ Ler 5 valores inteiros do usuário.
 Para cada valor lido, verificar se é par, ímpar, positivo ou negativo e incrementar os respectivos contadores.
 Exibir os valores contados em cada categoria.
 */
+var lines = [-5,0,-3,-4,12]
 
-const valores = [-5, 0, -3, -4, 12]; // Valores de exemplo
+let numerosPar = 0;
+let numeroImpar = 0;
+let contadorNegativo = 0;
+let contadorPositivo = 0; //zerando contadores e definindo
 
-let pares = 0;
-let impares = 0;
-let positivos = 0;
-let negativos = 0;
+for (let i = 0; i < 5; i++) { //só leitura de 5 inteiros por isso o i<5
+    let num = parseInt(lines.shift()); //vai ler as entradas e receber
 
-for (let i = 0; i <5; i++) {
-  const numero = parseInt(valores[i]);
+    if (num % 2 === 0) { //verifica se é par 
+      numerosPar++;
+    } else {
+      numeroImpar++; //se nao for par vai incrementar o ímpar
+    }
 
-  if (numero % 2 === 0){
-    pares++;
-  } else {
-    impares++;
-  }
-
-  if (numero > 0) {
-    positivos++;
-  } else if (numero < 0) {
-    negativos++;
-  }
+    if (num > 0) { //verifica se é positivo ou negativo
+        contadorPositivo++;
+    } else if (num < 0) {
+        contadorNegativo++;
+    }
 }
 
-console.log(pares +  " valor(es) par(es)");
-console.log(impares + " valor(es) impar(es)");
-console.log(positivos + " valor(es) positivo(s)");
-console.log(negativos + " valor(es) negativo(s)");
+console.log(`${numerosPar} valor(es) par(es)`);
+console.log(`${numeroImpar} valor(es) impar(es)`);
+console.log(`${contadorPositivo} valor(es) positivo(s)`);
+console.log(`${contadorNegativo} valor(es) negativo(s)`);
 
 
 

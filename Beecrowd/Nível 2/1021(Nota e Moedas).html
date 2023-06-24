@@ -7,42 +7,23 @@
 
 
     <script>
-
 var lines = ["576.73"]
-
-var valor = parseFloat(lines.shift());
-
-var notas = [100, 50, 20, 10, 5, 2];
-var moedas = [1, 0.5, 0.25, 0.1, 0.05, 0.01];
-
-var quantNotas = [];
-var quantMoedas = [];
-
-var resto = valor;
-
-for (var i = 0; i < notas.length; i++) {
-  quantNotas[i] = parseInt(resto / notas[i]);
-  resto = resto % notas[i];
-}
-var restoMoedas = resto
-
-for (var i = 0; i < moedas.length; i++) {
-  quantMoedas[i] = parseInt(restoMoedas / (moedas[i]));
-  restoMoedas = restoMoedas % (moedas[i]);
-}
+let valor = parseFloat(lines.shift());
+let notas = [100, 50, 20, 10, 5, 2];
+let moedas = [1, 0.5, 0.25, 0.1, 0.05, 0.01];
 
 console.log("NOTAS:");
-for (var i = 0; i < notas.length; i++) {
-  var quantidade = parseInt(valor / notas[i]);
-  console.log(quantidade + " nota(s) de R$ " + notas[i].toFixed(2));
-  valor = valor % notas[i];
+for (let n of notas) { //a variavel n recebe a interacao de cada valor da array notas
+  let quantidadeNotas = Math.floor(valor / n); //arredonda para baixo (inteiro mais proximo) com Math.floor
+  console.log(quantidadeNotas + " nota(s) de R$ " + n.toFixed(2));
+  valor %= n; //pegará o resto para atualizar o valor que usaremos abaixo
 }
 
 console.log("MOEDAS:");
-for (var i = 0; i < moedas.length; i++) {
-  var quantidade = parseInt(valor / moedas[i]);
-  console.log(quantidade + " moeda(s) de R$ " + moedas[i].toFixed(2));
-  valor = valor % moedas[i];
+for (let m of moedas) {
+  let quantidadeMoedas = Math.floor(valor / m);
+  console.log(quantidadeMoedas + " moeda(s) de R$ " + m.toFixed(2));
+  valor = (valor % m).toFixed(2);
 }
 
 
