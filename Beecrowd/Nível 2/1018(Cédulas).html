@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+var lines = ["576"]
+
+
+var valor = parseInt(lines.shift())
+var notas = [100, 50, 20, 10, 5, 2, 1]
+var quantidNotas = []
+var dif = valor
+
+for (var i = 0; i < notas.length; i++) {
+    quantidNotas[i] = parseInt(dif / notas[i])
+    dif = dif % notas[i]
+}
+var x = 0
+console.log(valor)
+for (var i = 0; i < notas.length; i++) {
+    console.log(quantidNotas[i] + " nota(s) de R$ " + notas[i] + ",00")
+    x += quantidNotas[i]
+}
+if (dif > 0) {
+    console.log(dif + " nota(s) de R$ 1,00")
+}
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

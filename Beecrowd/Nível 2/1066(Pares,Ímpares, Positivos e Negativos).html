@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+/*Para separar a lógica e criar o código para essa questão, podemos seguir os seguintes passos:
+
+Inicializar as variáveis contadoras para pares, ímpares, positivos e negativos.
+Ler 5 valores inteiros do usuário.
+Para cada valor lido, verificar se é par, ímpar, positivo ou negativo e incrementar os respectivos contadores.
+Exibir os valores contados em cada categoria.
+*/
+
+const valores = [-5, 0, -3, -4, 12]; // Valores de exemplo
+
+let pares = 0;
+let impares = 0;
+let positivos = 0;
+let negativos = 0;
+
+for (let i = 0; i <5; i++) {
+  const numero = parseInt(valores[i]);
+
+  if (numero % 2 === 0){
+    pares++;
+  } else {
+    impares++;
+  }
+
+  if (numero > 0) {
+    positivos++;
+  } else if (numero < 0) {
+    negativos++;
+  }
+}
+
+console.log(pares +  " valor(es) par(es)");
+console.log(impares + " valor(es) impar(es)");
+console.log(positivos + " valor(es) positivo(s)");
+console.log(negativos + " valor(es) negativo(s)");
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
