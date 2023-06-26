@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+var lines = ["3"];
+
+// Array
+var N = [];
+
+// Ler o valor de T
+var T = parseInt(lines.shift());
+
+// Preencher o vetor N
+var indice = 0;
+for (var i = 0; i < 1000; i++) {
+  N[i] = indice;
+  indice++;
+  if (indice === T) {
+    indice = 0;
+  }
+}
+// Listar o vetor N
+for (var i = 0; i < 1000; i++) {
+  console.log("N[" + i + "] = " + N[i]);
+}
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

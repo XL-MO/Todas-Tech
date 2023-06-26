@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+var lines = ["0", "-5", "63", "0"];
+
+ // Array
+var X = [];
+
+// Ler um array
+for (var indice = 0; indice < 10; indice++) {
+  X[indice] = parseInt(lines.shift());
+}
+
+// Substituir valores nulos e negativos por 1
+for (var indice = 0; indice < 10; indice++) {
+  if (X[indice] <= 0) {
+    X[indice] = 1;
+  }
+}
+
+// Listar o array
+for (var indice = 0; indice < 10; indice++) {
+  console.log("X[" + indice + "] = " + X[indice]);
+}
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

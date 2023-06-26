@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+var lines = ["200.000"];
+
+// Array
+var N = [];
+
+// Ler um valor X
+var X = parseFloat(lines.shift());
+
+// Atribuir o valor X à primeira posição do vetor N
+N[0] = X;
+
+// Preencher as posições subsequentes de N
+for (var i = 1; i < 100; i++) {
+  N[i] = N[i - 1] / 2;
+  N[i] = parseFloat(N[i].toFixed(4));
+}
+
+// Listar o vetor N com 4 casas decimais
+for (var i = 0; i < N.length; i++) {
+  console.log("N[" + i + "] = " + N[i].toFixed(4));
+}
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
