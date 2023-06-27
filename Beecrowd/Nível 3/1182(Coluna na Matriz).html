@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+var lines = [
+  "5",
+  "S",
+  "0.0",
+  "-3.5",
+  "2.5",
+  "4.1",
+  // restante dos valores da matriz
+];
+
+// Lendo a coluna e a operação
+var C = parseInt(lines.shift());
+var operation = lines.shift();
+
+// Criando a matriz e preenchendo com os valores da entrada
+var matrix = [];
+for (var i = 0; i < 12; i++) {
+  var row = [];
+  for (var j = 0; j < 12; j++) {
+    row.push(parseFloat(lines.shift()));
+  }
+  matrix.push(row);
+}
+
+// Realizando a operação
+var sum = 0;
+for (var i = 0; i < 12; i++) {
+  sum += matrix[i][C];
+}
+
+// Calculando a média, se for o caso
+if (operation === "M") {
+  sum /= 12;
+}
+
+// Imprimindo o resultado
+console.log(sum.toFixed(1));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

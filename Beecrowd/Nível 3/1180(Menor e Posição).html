@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var lines = ["10", "1 2 3 4 -5 6 7 8 9 10"];
+
+var N = parseInt(lines.shift()); // Ler o tamanho do vetor
+var X = lines.shift().split(' ').map(Number); // Ler os elementos do vetor e convertê-los para números
+
+var menorValor = X[0]; // Inicializar o menor valor com o primeiro elemento do vetor
+var posicao = 0; // Inicializar a posição com 0
+
+// Percorrer o vetor para encontrar o menor valor e sua posição
+for (var i = 0; i < N; i++) {
+  if (X[i] < menorValor) {
+    menorValor = X[i];
+    posicao = i;
+  }
+}
+
+// Imprimir o resultado
+console.log("Menor valor: " + menorValor);
+console.log("Posicao: " + posicao);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

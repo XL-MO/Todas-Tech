@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1178</title>
 
 
     <script>
 
-var lines = ["200.000"];
+var lines = ["200.0000"];
+
+// Ler um valor X
+var x = parseFloat(lines.shift()).toFixed(4);
 
 // Array
 var N = [];
 
-// Ler um valor X
-var X = parseFloat(lines.shift());
-
-// Atribuir o valor X à primeira posição do vetor N
-N[0] = X;
-
 // Preencher as posições subsequentes de N
-for (var i = 1; i < 100; i++) {
-  N[i] = N[i - 1] / 2;
-  N[i] = parseFloat(N[i].toFixed(4));
+for (var i = 0; i < 100; i++) {
+    console.log("N[" + i + "] = " + x);
+    var x = (x/2).toLocaleString(4);
 }
 
 // Listar o vetor N com 4 casas decimais
 for (var i = 0; i < N.length; i++) {
-  console.log("N[" + i + "] = " + N[i].toFixed(4));
+  console.log("N[" + i + "] = " + N[i].toLocaleString(4));
 }
 
+/*
+let n = parseFloat(lines.shift());
+for(var i = 0; i < 100; i++){
+    console.log(`N[${i}] = ${(((n).toLocaleString('en-US',{ minimumFractionDigits: 4 })).toString()).replace(/,/g, "")}`);
+    n = n / 2.0;
+
+    */
 
     </script>
 </head>

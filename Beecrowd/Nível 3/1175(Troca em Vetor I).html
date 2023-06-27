@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+var lines = [ "0","-5","63","230"];
+
+// Lendo os valores do vetor
+var vetor = [];
+for (var i = 0; i < 20; i++) {
+  vetor.push(parseInt(lines.shift()));
+}
+
+// Trocando os elementos do vetor
+for (var i = 0; i < 10; i++) {
+  var temp = vetor[i];
+  vetor[i] = vetor[19 - i];
+  vetor[19 - i] = temp;
+}
+
+// Imprimindo o vetor modificado
+for (var i = 0; i < 20; i++) {
+  console.log("N[" + i + "] = " + vetor[i]);
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
