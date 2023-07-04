@@ -7,7 +7,38 @@
 
     <script>
 
+// Lendo a operação
+var operation = lines.shift();
 
+// Criando a matriz e preenchendo com os valores da entrada
+var matriz = [];
+for (var i = 0; i < 12; i++) {
+  var linha = [];
+  for (var j = 0; j < 12; j++) {
+    linha.push(parseFloat(lines.shift()));
+  }
+  matriz.push(linha);
+}
+
+// Realizando a operação
+var soma = 0;
+var count = 0;
+for (var i = 0; i < 12; i++) {
+  for (var j = 0; j < 12; j++) {
+    if (j < i) {
+      soma += matriz[i][j];
+      count++;
+    }
+  }
+}
+
+// Calculando a média, se for o caso
+if (operation === "M") {
+  soma /= count;
+}
+
+// Imprimindo o resultado
+console.log(soma.toFixed(1));
 
     </script>
 </head>

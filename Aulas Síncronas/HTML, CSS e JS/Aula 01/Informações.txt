@@ -1,0 +1,26 @@
+*HTML*
+Linguagem de marcação( disponiiliza para o usuário informações graficas) para criar estruturas web, exemplo: textos
+imagens, tabelas, formulários, links, etc...
+
+*CSS*
+Linguagem de estilos, podemos alterar características da
+linguagem HTML, como por exemplo: fontes, cores, bordas...
+
+*JavaScript*
+É uma linguagem de programação.
+
+
+
+
+<!DOCTYPE html> // diz para o navegador o tipo de documento
+<html lang="en"> / conjunto de tags/comandos;  lang: idioma 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"// design resposivo 
+    content="width=device-width, initial-scale=1.0">
+    <title>Botão</title> // titulo
+</head>
+<body> // conteudos 
+    
+</body>
+</html>
