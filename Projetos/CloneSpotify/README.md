@@ -19,7 +19,7 @@ Spotify clone app
 
 ## 🎨 Tela
 
-<img src="spotify-clone-app-screenshots.jpg" alt="spotify-clone-app">
+<img src="./Tela_inicial.png" alt="tela">
 
 ## 📃 Sobre o projeto
 
