@@ -44,7 +44,26 @@
         </select>
 
         <input type="button" value="Calcular" class="btn btn-primary"> 
+        <div id="resultado"></div>
     </form>
+
+    <script>
+        function calcular() {
+            var valor = document.getElementById('valor').value;
+            var moeda = document.getElementById('moeda').value;
+            var resultado;
+
+            if (moeda === '1') {
+                resultado = valor * 5.23; // Conversão de Real para Dólar
+            } else if (moeda === '2') {
+                resultado = valor / 5.23; // Conversão de Dólar para Real
+            } else {
+                resultado = 'Escolha uma opção válida';
+            }
+
+            document.getElementById('resultado').innerHTML = 'Resultado: ' + resultado;
+        }
+    </script>
 
 </body>
 </html>
