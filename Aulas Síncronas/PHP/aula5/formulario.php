@@ -1,18 +1,20 @@
-<html lang="pt-br">
-  <head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de produto</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-   <h1> Cadastre seu profuto</h1>
-   <form action=" processa_produto.php" method="GET">
+</head>
+<body>
+    <h1>Cadastre seu produto</h1>
+    <form action="processa_produto.php" method="GET">
         <div>
             <label>Nome:</label>
             <input name="nome_produto" type="text">
         </div>
         <div>
             <label>Preço:</label>
-            <input name="preco_produto" step= .01 type="number">
+            <input name="preco_produto" step="any" type="number">
         </div>
         <div>
             <label>Categoria:</label>
@@ -22,9 +24,8 @@
                 <option value="3">Eletronicos</option>
             </select>
         </div>
-        <button> Cadastrar</button>
+        <button>Cadastrar</button>
         <button type="reset">Apagar</button>
-
     </form>
-  </body>
+</body>
 </html>
