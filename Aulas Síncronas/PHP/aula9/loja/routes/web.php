@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\Produtos;
-use App\Http\Controllers\Hello;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\Produtos;
+use App\Http\Controllers\Hello;
 
-Route::get('/', [Produtos::class, 'exibirProdutos']);
+// configuração de rota
+Route::get('/produtos', [ Produtos::class, 'exibirProdutos' ]);
 
-Route::get('/hello/{nome}/{sobrenome}', [ Hello:: class, 'exibeNome' ]);
+// difiniu a rota > [ Controller, ação ]
 
-
+// Criamos aqui uma rota dinâmica, nomeamos as variaveis que são
+// para o Controller (Hello)
+Route::get('/hello/{nome}/{sobrenome}', [ Hello::class, 'exibeNome' ]);
